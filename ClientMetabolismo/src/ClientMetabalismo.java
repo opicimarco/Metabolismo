@@ -15,6 +15,15 @@ public class ClientMetabalismo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    inserisciDB("opici","marco",77);
+    
     }
+
+    private static void inserisciDB(java.lang.String arg0, java.lang.String arg1, float arg2) {
+        metafunction.FunzioniService service = new metafunction.FunzioniService();
+        metafunction.Funzioni port = service.getFunzioniPort();
+        port.inserisciDB(arg0, arg1, arg2);
+    }
+       
     
 }
