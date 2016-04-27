@@ -16,6 +16,12 @@
 <message name="inserisciGiornataResponse">
 <part name="parameters" element="tns:inserisciGiornataResponse"/>
 </message>
+<message name="inserisciAttivita">
+<part name="parameters" element="tns:inserisciAttivita"/>
+</message>
+<message name="inserisciAttivitaResponse">
+<part name="parameters" element="tns:inserisciAttivitaResponse"/>
+</message>
 <portType name="Funzioni">
 <operation name="inserisciPersona">
 <input wsam:Action="http://MetaFunction/Funzioni/inserisciPersonaRequest" message="tns:inserisciPersona"/>
@@ -24,6 +30,10 @@
 <operation name="inserisciGiornata">
 <input wsam:Action="http://MetaFunction/Funzioni/inserisciGiornataRequest" message="tns:inserisciGiornata"/>
 <output wsam:Action="http://MetaFunction/Funzioni/inserisciGiornataResponse" message="tns:inserisciGiornataResponse"/>
+</operation>
+<operation name="inserisciAttivita">
+<input wsam:Action="http://MetaFunction/Funzioni/inserisciAttivitaRequest" message="tns:inserisciAttivita"/>
+<output wsam:Action="http://MetaFunction/Funzioni/inserisciAttivitaResponse" message="tns:inserisciAttivitaResponse"/>
 </operation>
 </portType>
 <binding name="FunzioniPortBinding" type="tns:Funzioni">
@@ -38,6 +48,15 @@
 </output>
 </operation>
 <operation name="inserisciGiornata">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="inserisciAttivita">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
