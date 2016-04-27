@@ -41,4 +41,25 @@ public class Funzioni {
             
     
 }
+    
+    @WebMethod(operationName="inserisciGiornata")
+    public void inserisciGiornata(int giorno,int mese, int anno){
+        try{
+            System.out.println("Import driver");
+            String driver="org.apache.derby.jdbc.ClientDriver";
+            Class.forName(driver); 
+            try{
+                System.out.println("Connessione db");
+                Connection con= DriverManager.getConnection("jdbc:derby://localhost:1527/Metabolismo");
+                Statement sta= con.createStatement();
+                System.out.println("Inserisco giornata");
+                sta.executeUpdate("insert into Giornata (giorno,mese,anno)"
+                        + "values ("+giorno+","+mese+","+anno+")");
+            }catch(SQLException SQLExc){SQLExc.printStackTrace();}
+                        }catch(Exception e){e.printStackTrace();}
+            
+    
+}
+    
+    
 }
