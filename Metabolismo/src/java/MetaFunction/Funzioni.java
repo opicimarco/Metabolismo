@@ -21,8 +21,10 @@ import javax.jws.WebService;
  */
 @WebService()
 public class Funzioni {
-    @WebMethod(operationName="inserisciDB")
-    public void inserisciDB(String nome,String cognome, float peso){
+    
+    
+    @WebMethod(operationName="inserisciPersona")
+    public void inserisciPersona(String nome,String cognome, float peso){
         try{
             System.out.println("Import driver");
             String driver="org.apache.derby.jdbc.ClientDriver";
