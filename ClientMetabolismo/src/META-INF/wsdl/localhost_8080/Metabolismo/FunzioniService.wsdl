@@ -4,21 +4,21 @@
 <xsd:import namespace="http://MetaFunction/" schemaLocation="http://localhost:8080/Metabolismo/FunzioniService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="inserisciDB">
-<part name="parameters" element="tns:inserisciDB"/>
+<message name="inserisciPersona">
+<part name="parameters" element="tns:inserisciPersona"/>
 </message>
-<message name="inserisciDBResponse">
-<part name="parameters" element="tns:inserisciDBResponse"/>
+<message name="inserisciPersonaResponse">
+<part name="parameters" element="tns:inserisciPersonaResponse"/>
 </message>
 <portType name="Funzioni">
-<operation name="inserisciDB">
-<input wsam:Action="http://MetaFunction/Funzioni/inserisciDBRequest" message="tns:inserisciDB"/>
-<output wsam:Action="http://MetaFunction/Funzioni/inserisciDBResponse" message="tns:inserisciDBResponse"/>
+<operation name="inserisciPersona">
+<input wsam:Action="http://MetaFunction/Funzioni/inserisciPersonaRequest" message="tns:inserisciPersona"/>
+<output wsam:Action="http://MetaFunction/Funzioni/inserisciPersonaResponse" message="tns:inserisciPersonaResponse"/>
 </operation>
 </portType>
 <binding name="FunzioniPortBinding" type="tns:Funzioni">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="inserisciDB">
+<operation name="inserisciPersona">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

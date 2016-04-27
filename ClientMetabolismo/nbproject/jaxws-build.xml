@@ -16,22 +16,22 @@
             <classpath path="${libs.jaxws21.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsimport-client-FunzioniService" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/FunzioniService"/>
-        <property name="wsdl-FunzioniService" location="xml-resources/web-service-references/FunzioniService/wsdl/localhost_8080/Metabolismo/FunzioniService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/FunzioniService" destdir="${build.generated.dir}/jax-wsCache/FunzioniService" wsdl="${wsdl-FunzioniService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Metabolismo/FunzioniService?WSDL" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-FunzioniService}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/FunzioniService"/>
+    <target name="wsimport-client-FunzioniService_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/FunzioniService_1"/>
+        <property name="wsdl-FunzioniService_1" location="xml-resources/web-service-references/FunzioniService_1/wsdl/localhost_8080/Metabolismo/FunzioniService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/FunzioniService_1" destdir="${build.generated.dir}/jax-wsCache/FunzioniService_1" wsdl="${wsdl-FunzioniService_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Metabolismo/FunzioniService?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-FunzioniService_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/FunzioniService_1"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/FunzioniService">
+            <fileset dir="${build.generated.dir}/jax-wsCache/FunzioniService_1">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-FunzioniService" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/FunzioniService"/>
+    <target name="wsimport-client-clean-FunzioniService_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/FunzioniService_1"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/metafunction"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-FunzioniService"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-FunzioniService_1"/>
 </project>
